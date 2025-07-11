@@ -1,0 +1,32 @@
+    {
+        "data": [
+            {
+                "id": 1,
+                "title": "Product 1",
+                "description": "Description for Product 1",
+                "price": 100,
+                "stock": 50,
+                "image": "https://s03.s3c.es/imag/_v0/1200x655/9/c/9/Productos.jpg",
+                "category": "Category 1"
+            },
+            {
+                "id": 2,
+                "title": "Product 2",
+                "description": "Description for Product 2",
+                "price": 200,
+                "stock": 30,
+                "image": "https://s03.s3c.es/imag/_v0/1200x655/9/c/9/Productos.jpg",
+                "category": "Category 2"
+            },
+            {
+                "id": 3,
+                "title": "Product 3",
+                "description": "Description for Product 3",
+                "price": 300,
+                "stock": 20,
+                "image": "https://s03.s3c.es/imag/_v0/1200x655/9/c/9/Productos.jpg",
+                "category": "Category 3"
+            }
+            
+        ]
+    }
