@@ -1,4 +1,8 @@
 <script setup>
+    import { useRouter } from 'vue-router'  
+
+    const router = useRouter()
+
     defineProps({
         products: {
             type: Array,
@@ -9,8 +13,13 @@
 
 <template>
     <div class="card-list">
-        <div v-for="product in products" :key="product.id" class="card">
-            <!-- <img :src="product.image" :alt="product.title" /> -->
+        <router-link 
+            v-for="product in products" 
+            :key="product.id" 
+            class="card"
+            :to="`/products/${product.id}`"
+        >
+            <img :src="product.image" :alt="product.title" />
             <div class="card-body">
                 <h3>{{ product.title }}</h3>
                 <p>{{ product.description }}</p>
@@ -18,7 +27,7 @@
                 <p>Stock: {{ product.stock }}</p>
                 <p>Category: {{ product.category }}</p>
             </div>
-        </div>
+        </router-link>
     </div>
 </template>
 
@@ -45,6 +54,8 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         transition: transform 0.2s;
         color: black;
+
+        cursor: pointer;
     }
     .card:hover {
         transform: translateY(-5px);

@@ -4,9 +4,11 @@ import HomePage from './pages/HomePage.vue';
 </script>
 
 <template>
-
-    <HomePage />
-   
+    <main>
+        <HelloWorld msg="Welcome to Your Vue.js App" />
+        <RouterView />        
+    </main>
+    <!-- <HomePage /> -->
 </template>
 
 <style scoped>

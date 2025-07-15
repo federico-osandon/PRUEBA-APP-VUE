@@ -27,10 +27,10 @@ import List from '../components/List.vue';
 
 </script>
 <template>
-    <main>
+    
         <h1>Welcome to the Home Page</h1>
         <List :products="products" />
-    </main>
+   
 </template>
 <style scoped>
     main {
