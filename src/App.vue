@@ -1,11 +1,13 @@
 <script setup>
-    import HelloWorld from './components/HelloWorld.vue'
-import HomePage from './pages/HomePage.vue';
+    import { RouterView } from 'vue-router';
+import NavBar from './components/ui/NavBar.vue'
+   
 </script>
 
 <template>
     <main>
-        <HelloWorld msg="Welcome to Your Vue.js App" />
+        <NavBar />
+        <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
         <RouterView />        
     </main>
     <!-- <HomePage /> -->

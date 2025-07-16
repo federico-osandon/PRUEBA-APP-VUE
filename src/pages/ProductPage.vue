@@ -37,15 +37,15 @@ const fetchProduct = async (pid) => {
 
 
 <template>
-    <div>
+    <div class="container-product">
         
 
             <div v-if="product" class="card">
-                <div>
+                <div class="card-image">
                     <img :src="product.image" :alt="product.title" />
 
                 </div>
-                <div>
+                <div class="card-body">
                     <h2>{{ product.title }}</h2>
                     <p>{{ product.description }}</p>
                     <p>Price: ${{ product.price }}</p>
@@ -63,6 +63,14 @@ const fetchProduct = async (pid) => {
 </template>
 
 <style scoped>
+    .container-product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 20px;
+    }
     .product {
         display: flex;
         flex-direction: column;
@@ -72,7 +80,7 @@ const fetchProduct = async (pid) => {
     }
     img {
         width: 80%;
-        height: 150px;
+        /* height: 150px; */
         object-fit: cover;
         border-radius: 8px;
         margin-bottom: 10px;
@@ -80,6 +88,7 @@ const fetchProduct = async (pid) => {
     h2 {
         margin: 0;
         padding: 0;
+        font-size: 48px;
     }
     p {
         margin: 0;
@@ -89,9 +98,15 @@ const fetchProduct = async (pid) => {
     .card {
         display: flex;
         flex-direction: row;
-        align-items: start;
-        justify-content: start;
-        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .card-image {
+        width: 50%;
+    }
+    .card-body {
+        width: 50%;
     }
 </style>
     
